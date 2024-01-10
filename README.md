@@ -137,3 +137,26 @@ Tout d’abord, initialiser le répertoire avec cette commande :
  . terraform apply 
  
 
+## Changer d'infrastructure
+
+- Créer une nouvelle ressource
+
+Rajoutons la configuration suivante pour une ressource d'instance de calcul Google à main.tf
+
+![new config](/pictures/new-config.png)
+
+
+- Modifier la configuration
+
+On va juste rajoute la ligne suivante : tags = ["web", "dev"] dans  resource "google_compute_instance" "vm_instance" 
+
+
+![new config](/pictures/modif-tag.png)
+
+![new config](/pictures/modif-image.png)
+
+## Destruction d'infrastructure
+- Destruction
+
+Pour mettre fin aux ressources gérées
+  . terraform destroy
